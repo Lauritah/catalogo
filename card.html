@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cardstyle.css">
+    <script>
+
+
+        function agregar(target) {
+            // obtenemos el id del boton en la variable id
+            let id = target.id
+            // obtenemos el indice del boton para saber q tarjeta fue
+            let index = id.split("-")[1]
+            // obtenemos la tarjeta con el indice del boton
+            let card = document.getElementById("card-" + index)
+            card.style.opacity = 0
+            setTimeout(() => {
+                card.style.display = "none"
+            }, 499)
+
+
+        }
+    </script>
+</head>
+
+
+<body>
+    <div class="hero">
+        <h1>Esta es mi página</h1>
+        <a href="#catalogo" class="cta" onclick="scrollTo('catalogo')">Ver ya</a>
+    </div>
+    <div id="catalogo">
+        <div id="card-1" class="card">
+            <div class="image">
+                <img src="card.jpg" alt="casa">
+                <button id="add-1" type="button" class="addbutton" onclick="agregar(this)">+</button>
+            </div>
+            <div class="info">
+                <h3>Castillo en la colina</h3>
+                <p>Lindo castillo en una colina de Inglaterra</p>
+            </div>
+        </div>
+        <div id="card-2" class="card">
+            <div class="image">
+                <img src="card2.jpg" alt="casa">
+                <button id="add-2" type="button" class="addbutton" onclick="agregar(this)">+</button>
+            </div>
+            <div class="info">
+                <h3>Chalet</h3>
+                <p>Chalet de tejas francesas</p>
+            </div>
+        </div>
+        <div id="card-3" class="card">
+            <div class="image">
+                <img src="card3.jpg" alt="casa">
+                <button id="add-3" type="button" class="addbutton" onclick="agregar(this)">+</button>
+            </div>
+            <div class="info">
+                <h3>Casa en el lago</h3>
+                <p>Casa en un Lago de Italia con hermosas vistas naturales</p>
+            </div>
+        </div>
+        <div id="card-4" class="card">
+            <div class="image">
+                <img src="card4.jpg" alt="casa">
+                <button id="add-4" type="button" class="addbutton" onclick="agregar(this)">+</button>
+            </div>
+            <div class="info">
+                <h3>Ranchón otoñal </h3>
+                <p>Disfruta de unas tranquilas vacaciones este ranchón del sur de Alemania</p>
+            </div>
+        </div>
+        <div id="card-5" class="card">
+            <div class="image">
+                <img src="card5.jpg" alt="casa">
+                <button id="add-5" type="button" class="addbutton" onclick="agregar(this)">+</button>
+            </div>
+            <div class="info">
+                <h3>Pasadía en casa tenebrosa</h3>
+                <p>Atrevete a pasar un dia en esta tenebrosa casa de 1780</p>
+            </div>
+        </div>
+        <div id="card-6" class="card">
+            <div class="image">
+                <img src="card6.jpg" alt="casa">
+                <button id="add-6" type="button" class="addbutton" onclick="agregar(this)">+</button>
+            </div>
+            <div class="info">
+                <h3>Casa del Conde Dárcula</h3>
+                <p>¿Alguna vez has visitado la casa de un verdadero vampiro? </p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
