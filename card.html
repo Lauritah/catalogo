@@ -26,6 +26,7 @@
         }
     </script>
 </head>
+
 <body>
     <div class="hero">
         <h1>Esta es mi página</h1>
@@ -93,5 +94,14 @@
             </div>
         </div>
     </div>
+    <button class="to-top" onclick="toTop()">
+        ^
+    </button>
+    <script>
+        function toTop() {
+            window.scroll({ top: 0, left: 0, behavior: "smooth" })
+        }
+    </script>
 </body>
+
 </html>
